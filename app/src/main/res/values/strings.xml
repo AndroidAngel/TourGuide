@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Tour Guide</string>
+
+    <string name="bukidnon">Bukidnon</string>
+    <string name="mt_kitanglad">Mt. Kitanglad</string>
+    <string name="dahilayan_forest_park">Dahilayan Forest Park</string>
+    <string name="sumalsag_cave">Sumalsag Cave</string>
+    <string name="Bukidnon">Bukidnon</string>
+    <string name="mt._Kitanglad">Mt. Kitanglad</string>
+    <string name="activity_name_bukidnon">Bukidnon</string>
+    <string name="activity_name_mt._kitanglad">Mt. Kitanglad</string>
+    <string name="activity_name_dahilayan_forest_park">Dahilayan Forest Park</string>
+    <string name="activity_name_blue_water_cave">Blue Water Cave</string>
+    <string name="activity_name_sumalsag_cave">Sumalsag Cave</string>
+    <string name="blue_water_cave">blue Water Cave</string>
+
+
+    <string name="page_title_main">Bukidnon</string>
+    <string name="page_title_first">Mt. Kitanglad</string>
+    <string name="page_title_second">Dahilayan</string>
+    <string name="page_title_third">Blue Cave Water</string>
+    <string name="page_title_fourth">Sumalsag Cave</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

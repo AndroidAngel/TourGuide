@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.teamandroidangel.iamangelauditor.tourguide.MainActivity"
+    android:orientation="vertical">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        android:theme="@style/MyStyle"
+        app:tabMode="fixed"/>
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+        <!--<TextView-->
+            <!--android:id="@+id/mainTextView"-->
+            <!--android:paddingTop="20dp"-->
+            <!--style="@style/CategoryStyle"-->
+            <!--android:background="?android:attr/selectableItemBackground"-->
+            <!--android:text="@string/bukidnon" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/firstTextView"-->
+            <!--style="@style/CategoryStyle"-->
+            <!--android:background="?android:attr/selectableItemBackground"-->
+            <!--android:text="@string/mt_kitanglad"-->
+       <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/secondTextView"-->
+            <!--style="@style/CategoryStyle"-->
+            <!--android:background="?android:attr/selectableItemBackground"-->
+            <!--android:text="@string/dahilayan_forest_park"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/thirdTextView"-->
+            <!--style="@style/CategoryStyle"-->
+            <!--android:background="?android:attr/selectableItemBackground"-->
+            <!--android:text="@string/blue_water_cave"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/fourthTextView"-->
+            <!--style="@style/CategoryStyle"-->
+            <!--android:background="?android:attr/selectableItemBackground"-->
+            <!--android:text="@string/sumalsag_cave"-->
+             <!--/>-->
+
+
+
