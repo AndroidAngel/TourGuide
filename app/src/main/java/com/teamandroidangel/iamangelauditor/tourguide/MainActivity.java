@@ -1,28 +1,36 @@
 package com.teamandroidangel.iamangelauditor.tourguide;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.View;
-import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    TabLayout tabLayout;
+    ViewPager viewPager;
+    SimpleFragmentPagerAdapter viewPagerAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        android.support.v7.widget.Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        ViewPager viewPager = findViewById(R.id.view_pager);
-        viewPager.setAdapter(new SimpleFragmentPagerAdapter(getSupportFragmentManager(),
-                MainActivity.this));
-        TabLayout tabLayout = findViewById(R.id.sliding_tabs);
+        tabLayout = findViewById(R.id.tabs);
+        viewPager = findViewById(R.id.viewPager);
+        viewPagerAdapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
 
 
     }
+
 }

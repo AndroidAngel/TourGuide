@@ -16,10 +16,8 @@ import java.util.ArrayList;
  */
 public class FirstAttractionFragment extends Fragment {
 
-
     public  FirstAttractionFragment () {
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

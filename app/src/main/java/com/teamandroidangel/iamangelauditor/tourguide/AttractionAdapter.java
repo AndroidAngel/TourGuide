@@ -1,6 +1,7 @@
 package com.teamandroidangel.iamangelauditor.tourguide;
 
-import android.app.Activity;
+import android.content.Context;
+import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,13 +16,22 @@ import java.util.ArrayList;
  * Created by iamangelauditor on 10/12/2017.
  */
 
-public class AttractionAdapter extends ArrayAdapter<Attraction> {
-
+public class AttractionAdapter extends ArrayAdapter {
+    private ArrayList<Attraction> dataSet;
+    Context mContext;
     private int mColorResource;
 
-    public AttractionAdapter(Activity context, ArrayList<Attraction> attractions, int colorResource) {
-        super(context,0, attractions);
+
+    public AttractionAdapter(Context context, ArrayList<Attraction> attractions, int colorResource) {
+        super(context,R.layout.list_item,attractions);
+        this.dataSet = attractions;
+        this.mContext = context;
         mColorResource = colorResource;
+    }
+    @Nullable
+    @Override
+    public Attraction getItem(int position) {
+        return dataSet.get(position);
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
@@ -31,7 +41,6 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
                     R.layout.list_item,parent,false);
         }
         Attraction currentAttraction = getItem(position);
-
         TextView firstView = listItemView.findViewById(R.id.firstTextViewLabel);
         assert currentAttraction != null;
         firstView.setText(currentAttraction.getFirstLabel());
@@ -57,13 +66,11 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
         }else{
             secondImage.setVisibility(View.GONE);
         }
-
         View textContainer = listItemView.findViewById(R.id.text_container);
-        int color = ContextCompat.getColor(getContext(),mColorResource);
+        int color = ContextCompat.getColor(getContext(), mColorResource);
         textContainer.setBackgroundColor(color);
 
         return listItemView;
 
     }
-
 }

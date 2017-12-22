@@ -11,13 +11,10 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT = 5;
-    private String tabTitles[] = new String[]{"Tab1","Tab2","Tab3","Tab4","Tab5"};
-    private Context context;
 
 
-    public SimpleFragmentPagerAdapter(FragmentManager fm, Context context) {
+    public SimpleFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
-        this.context = context;
 
     }
 
@@ -29,24 +26,38 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        switch (position){
-            case 0:
-                return new MainPlaceFragment();
-            case 1:
-                return new FirstAttractionFragment();
-            case 2:
-                default: return null;
-
-
-
-
+        Fragment fragment = null;
+        if (position == 0) {
+            fragment = new MainPlaceFragment();
+        } else if (position == 1) {
+            fragment = new FirstAttractionFragment();
+        } else if (position == 2) {
+            fragment = new SecondAttractionFragment();
+        } else if (position == 3) {
+            fragment = new ThirdAttractionFragment();
+        } else if (position == 4) {
+            fragment = new FourthAttractionFragment();
         }
-   // return MainPlaceFragment.newInstance(position + 1);
+        return fragment;
+    }
 
-       }
+
 
     @Override
     public CharSequence getPageTitle(int position){
-        return tabTitles[position];
+        String title = null;
+        if (position == 0)
+        {
+            title = "View 1";
+        }else if (position == 1){
+            title = "View 2";
+        }else if (position == 2){
+            title = "View 3";
+        }else if (position == 3){
+            title = "View 4";
+        }else if (position == 4){
+            title = "View 5";
+        }
+        return title;
     }
 }

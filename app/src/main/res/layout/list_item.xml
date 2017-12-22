@@ -1,62 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/text_container"
-        android:orientation="vertical"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
-
-     <TextView
-         android:id="@+id/mainLabelView"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:gravity="center"
-         android:textStyle="bold"
-         android:paddingTop="10dp"
-         android:textSize="25sp"
-         />
-    <ImageView
-        android:id="@+id/firstImage"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingRight="5dp"
-        android:paddingLeft="5dp"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/firstTextViewLabel"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:textAppearance="?android:textAppearanceMedium"
+        <TextView
+            android:id="@+id/mainLabelView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
+        <ImageView
+            android:id="@+id/firstImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" />
 
-        />
+        <TextView
+            android:id="@+id/firstTextViewLabel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:textAppearance="?android:textAppearanceMedium" />
 
-    <ImageView
-        android:id="@+id/secondImage"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingRight="5dp"
-        android:paddingLeft="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        />
-    <TextView
-        android:id="@+id/secondTextViewLabel"
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:textAppearance="?android:textAppearanceMedium"
-        />
+        <ImageView
+            android:id="@+id/secondImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" />
 
-</LinearLayout>
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/secondTextViewLabel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+    </LinearLayout>
+</RelativeLayout>
