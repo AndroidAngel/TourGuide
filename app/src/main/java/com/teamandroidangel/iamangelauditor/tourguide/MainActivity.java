@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
     SimpleFragmentPagerAdapter viewPagerAdapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +28,5 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
-
-
     }
-
 }

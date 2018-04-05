@@ -23,22 +23,24 @@ public class AttractionAdapter extends ArrayAdapter {
 
 
     public AttractionAdapter(Context context, ArrayList<Attraction> attractions, int colorResource) {
-        super(context,R.layout.list_item,attractions);
+        super(context, R.layout.list_item, attractions);
         this.dataSet = attractions;
         this.mContext = context;
         mColorResource = colorResource;
     }
+
     @Nullable
     @Override
     public Attraction getItem(int position) {
         return dataSet.get(position);
     }
+
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
+    public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
-        if (listItemView == null){
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item,parent,false);
+                    R.layout.list_item, parent, false);
         }
         Attraction currentAttraction = getItem(position);
         TextView firstView = listItemView.findViewById(R.id.firstTextViewLabel);
@@ -52,18 +54,18 @@ public class AttractionAdapter extends ArrayAdapter {
         secondView.setText(currentAttraction.getSecondLabel());
 
         ImageView firstImage = listItemView.findViewById(R.id.firstImage);
-        if (currentAttraction.hasImage()){
+        if (currentAttraction.hasImage()) {
             firstImage.setImageResource(currentAttraction.getFirstImageResource());
             firstImage.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             firstImage.setVisibility(View.GONE);
         }
 
         ImageView secondImage = listItemView.findViewById(R.id.secondImage);
-        if (currentAttraction.hasImage()){
+        if (currentAttraction.hasImage()) {
             secondImage.setImageResource(currentAttraction.getSecondImageResource());
             secondImage.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             secondImage.setVisibility(View.GONE);
         }
         View textContainer = listItemView.findViewById(R.id.text_container);
@@ -71,6 +73,5 @@ public class AttractionAdapter extends ArrayAdapter {
         textContainer.setBackgroundColor(color);
 
         return listItemView;
-
     }
 }

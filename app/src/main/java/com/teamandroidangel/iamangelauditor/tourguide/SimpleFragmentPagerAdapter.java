@@ -11,19 +11,13 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT = 5;
-
-
     public SimpleFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
-
     }
-
-
     @Override
     public int getCount() {
         return PAGE_COUNT;
     }
-
     @Override
     public Fragment getItem(int position) {
         Fragment fragment = null;
@@ -40,22 +34,18 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         }
         return fragment;
     }
-
-
-
     @Override
-    public CharSequence getPageTitle(int position){
+    public CharSequence getPageTitle(int position) {
         String title = null;
-        if (position == 0)
-        {
+        if (position == 0) {
             title = "View 1";
-        }else if (position == 1){
+        } else if (position == 1) {
             title = "View 2";
-        }else if (position == 2){
+        } else if (position == 2) {
             title = "View 3";
-        }else if (position == 3){
+        } else if (position == 3) {
             title = "View 4";
-        }else if (position == 4){
+        } else if (position == 4) {
             title = "View 5";
         }
         return title;
